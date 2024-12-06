@@ -1,0 +1,349 @@
+{
+    "type": "bundle",
+    "id": "bundle--10033198-623e-4820-89fe-79e0cf7f425a",
+    "objects": [
+      
+      
+        {  
+        "type": "marking-definition",  
+        "spec_version": "2.1",  
+        "id": "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa",  
+        "created": "2024-12-05T11:57:00.000Z",   
+        "definition_type": "statement",
+        "definition": {
+          "statement": "For experimental purposes only"
+        }
+      },
+
+      {
+        "type": "threat-actor",
+        "spec_version": "2.1",
+        "id": "threat-actor--b96b889c-f47f-4c1c-8cdd-c1e3bdcc8b7a",
+        "created": "2024-12-05T11:57:07.243000Z",
+        "modified": "2024-12-05T11:57:07.243000Z",
+        "name": "MedusaLocker",
+        "description": "Hunters International is a high-risk ransomware organization.",
+        "threat_actor_types": [
+            "criminal"
+        ],
+        "goals": ["Stealing data to ransom"],
+        "sophistication": "advanced",
+        "resource_level": "team",
+        "primary_motivation": "organizational-gain",
+        "object_marking_refs": [
+          "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+      ]
+
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c387b4ec-2051-4ce5-b37a-9937fd49e311",
+      "created": "2024-12-05T11:58:07.243000Z",
+      "modified": "2024-12-05T11:58:07.243000Z",
+      "name": "MedusaLocker Ransomware File Hash",
+      "description": "This file is a part of MedusaLocker Ransomware",
+      "pattern": "[file:hashes.'SHA-256' = 'c9ae3a5b170375f80e1d862b3885c5e4c052c0286ae405374a09f3cd1e517d18']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:58:08.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c8e53b21-d5d5-4d25-a346-a840fe2c1687",
+      "created": "2024-12-05T11:58:08.243000Z",
+      "modified": "2024-12-05T11:58:08.243000Z",
+      "name": "MedusaLocker Ransomware File Hash",
+      "description": "This file is a part of MedusaLocker Ransomware",
+      "pattern": "[file:hashes.'SHA-256' = '980287a7dc224cd0d21002eada43f013b3a73979a5f8bcfd4d67b9816cd6d399']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:58:09.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aa40672e-322c-4755-8c7f-2a183df536c2",
+      "created": "2024-12-05T11:58:09.243000Z",
+      "modified": "2024-12-05T11:58:09.243000Z",
+      "name": "MedusaLocker Ransomware File Hash",
+      "description": "This file is a part of MedusaLocker Ransomware",
+      "pattern": "[file:hashes.'SHA-256' = 'd00f7cf6af68ba832b9d364f28411346cfe66fd3b1f5bcac318766add29ff7f0']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:00.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2ac93968-e71a-464d-9619-bf12e259fca5",
+      "created": "2024-12-05T11:59:00.243000Z",
+      "modified": "2024-12-05T11:59:00.243000Z",
+      "name": "MedusaLocker Ransomware File Hash",
+      "description": "This file is a part of MedusaLocker Ransomware",
+      "pattern": "[file:hashes.'SHA-256' = '1f2df15442593b159e45d16a27e4d43d3a9062da212a588ba4c048f214a0b7be']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:01.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5b1b2de5-f4b2-4b83-81da-100e56828bcb",
+      "created": "2024-12-05T11:59:01.243000Z",
+      "modified": "2024-12-05T11:59:01.243000Z",
+      "name": "MedusaLocker Ransomware File Hash",
+      "description": "This file is a part of MedusaLocker Ransomware",
+      "pattern": "[file:hashes.'SHA-256' = '23f8874584b16aa398dc068d111b09a7f7da52e1279c63ef8d4d169aa22e5661']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:02.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--97cbff6b-12a8-48ae-93b8-07388395bf51",
+      "created": "2024-12-05T11:59:02.243000Z",
+      "modified": "2024-12-05T11:59:02.243000Z",
+      "name": "MedusaLocker Ransomware File Hash",
+      "description": "This file is a part of MedusaLocker Ransomware",
+      "pattern": "[file:hashes.'SHA-256' = '53dafc2d201cbf05cbb755778660b0b683da939401bfa73e18ef1c0d7de772d6']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:03.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ea37377e-5755-4f51-95f6-9434c3a35333",
+      "created": "2024-12-05T11:59:03.243000Z",
+      "modified": "2024-12-05T11:59:03.243000Z",
+      "name": "Domain Indicator",
+      "description": "This is a malicious domain name about MedusaLocker Ransomware",
+      "pattern": "[domain-name:value = 'kanzensei.top']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:04.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c63a54b0-1efc-4033-9d82-96479a95c30a",
+      "created": "2024-12-05T11:59:04.243000Z",
+      "modified": "2024-12-05T11:59:04.243000Z",
+      "name": "Domain Indicator",
+      "description": "This is a malicious domain name about MedusaLocker Ransomware",
+      "pattern": "[domain-name:value = 'surakshaguardian.com']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:05.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3a91817e-87c6-4128-a016-4900af7165dd",
+      "created": "2024-12-05T11:59:05.243000Z",
+      "modified": "2024-12-05T11:59:05.243000Z",
+      "name": "Domain Indicator",
+      "description": "This is a malicious domain name about MedusaLocker Ransomware",
+      "pattern": "[domain-name:value = 'md5.in']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:06.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    },
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7941e80e-9d00-4639-ad0b-d3d6e084cbda",
+      "created": "2024-12-05T11:59:06.243000Z",
+      "modified": "2024-12-05T11:59:06.243000Z",
+      "name": "Domain Indicator",
+      "description": "This is a malicious domain name about MedusaLocker Ransomware",
+      "pattern": "[domain-name:value = 'hashes.com']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:07.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--64392afb-a5a9-494b-8146-b7c19acab062",
+      "created": "2024-12-05T11:59:07.243000Z",
+      "modified": "2024-12-05T11:59:07.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '91.238.181.71']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:08.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--617edb78-4da3-4e25-933f-e9d5ec68d0f0",
+      "created": "2024-12-05T11:59:08.243000Z",
+      "modified": "2024-12-05T11:59:08.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '185.73.124.33']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:09.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e3013810-bcee-4a20-99a6-d82404f33c16",
+      "created": "2024-12-05T11:59:09.243000Z",
+      "modified": "2024-12-05T11:59:09.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '45.227.254.54']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:10.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bd4abce2-6e88-42d2-85b1-f450a18cd6cd",
+      "created": "2024-12-05T11:59:10.243000Z",
+      "modified": "2024-12-05T11:59:10.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '91.102.183.60']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:11.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7b5d6fd9-bfc7-4c77-9f6c-c0b966ac355e",
+      "created": "2024-12-05T11:59:11.243000Z",
+      "modified": "2024-12-05T11:59:11.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '94.198.53.5']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:12.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d74b4335-7e94-44d7-ae4b-43410f69bcea",
+      "created": "2024-12-05T11:59:12.243000Z",
+      "modified": "2024-12-05T11:59:12.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '203.56.4.242']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:13.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a2f1cf7e-8d8b-406a-8bc2-136812c73381",
+      "created": "2024-12-05T11:59:13.243000Z",
+      "modified": "2024-12-05T11:59:13.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '43.153.68.225']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:14.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }, 
+
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--66413287-096a-4c30-987b-acab0e1179b0",
+      "created": "2024-12-05T11:59:14.243000Z",
+      "modified": "2024-12-05T11:59:14.243000Z",
+      "name": "IPv4 Indicator",
+      "description": "This is a malicious external IP address about MedusaLocker Ransomware",
+      "pattern": "[ipv4-addr:value = '147.45.112.222']",
+      "pattern_type": "stix",
+      "indicator_types": ["malicious-activity"],
+      "valid_from": "2024-12-05T11:59:15.000000Z",
+      "object_marking_refs": [
+        "marking-definition--b07c9157-0066-4247-82ca-90ef870786fa"
+    ]
+    }
+
+
+
+    ]
+}
