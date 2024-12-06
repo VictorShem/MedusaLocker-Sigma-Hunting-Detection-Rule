@@ -1,0 +1,34 @@
+title: Detects win.medusalocker
+id: 4e71f45c-55a1-4e6d-a5c1-76accc08d335
+description: Detects win.medusalocker.
+status: experimental
+author: Hu@Sha
+date: 2024-12-05
+modified: 2024-12-05
+references:
+  - https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-181a
+tags:
+  - ransomware.medusalocker
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    CommandLine:
+      - '\MedusaLockerInfo\MedusaLockerProject\MedusaLocker\Release\MedusaLocker.pdb'
+      - 'SOFTWARE\Medusa'
+      - 'vssadmin.exe delete'
+      - 'bcdedit.exe /set {default}'
+      - 'wbadmin delete systemstatebackup'
+      - '.1btc,.bec,.cn,.datalock,.deadfilesgr,.rdp,.encrypted,.fileslock,.marlock13,.marlock25,.marlock6'
+      - '.matlock20,.mylock,.NET1,.NZ,.tyco,.uslockhh,.zoomzoom,.nt_lock20,.marlock01,.marlock02'
+      - '.key1,.lock,.lockdata7,.lockfiles,.perfection,.Readinstruction,.READINSTRUCTION,.ReadInstructions'
+      - '.readinstructions,.marlock11,.fileslocked,.lockfilesUS,.rs,.marlock08'
+      - '[LOCKER]'
+      - 'n.exe'
+      - 'jpz.nz'
+      - 'wevtutil.exe cl'
+  condition: selection
+falsepositives:
+  - 'Administrators or tools performing legitimate actions.'
+level: high
