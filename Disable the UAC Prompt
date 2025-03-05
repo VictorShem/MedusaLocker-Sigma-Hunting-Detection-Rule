@@ -1,0 +1,29 @@
+title: Disable the UAC Prompt
+id: 4a0bbff8-89b6-4cf2-864f-8cd99cee7d3f
+status: experimental
+description: MedusaLocker ransomware attempts to disable the UAC prompt so that the system will not prompt for authentication.
+references:
+    - https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-181a
+    - https://cyble.com/blog/unmasking-medusalocker-ransomware/
+author: Hu@sha
+date: 2024-12-26
+modified: 2024-12-26
+tags:
+    - attack.DefenseEvasion
+    - attack.t1556.009
+    - ransomware.medusalocker
+logsource:
+    category: registry_value_set
+    product: windows
+    service: sysmon
+detection:
+    selection:
+        EventID: 13
+        TargetObject|contains:
+            -  'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA'
+            -  'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorAdmin'
+        Details: 'DWORD (0x00000000)'
+    condition: selection
+falsepositives:
+    - Unknown
+level: high
