@@ -1,0 +1,28 @@
+title: svhost.exe or svhostt.exe Executable File Creation
+id: e756483f-097f-40d5-8d4b-38abb6860c79
+status: experimental
+description: MedusaLocker ransomware establishes persistence by copying an executable (svhost.exe or svhostt.exe) to the %APPDATA%\Roaming directory and scheduling a task to run the ransomware every 15 minutes.
+references:
+    - https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-181a
+author: Hu@sha
+date: 2024-12-25
+modified: 2024-12-25
+tags:
+    - attack.persistence
+    - attack.t1543
+    - ransomware.medusalocker
+logsource:
+    category: file_created
+    product: windows
+    service: sysmon
+detection:
+    selection:
+        EventID: 11
+        RuleName: EXE
+        TargetFilename|endswith:
+            - \AppData\Roaming\svchott.exe
+            - \AppData\Roaming\svhost.exe
+    condition: selection
+falsepositives:
+    - Unknown
+level: high
