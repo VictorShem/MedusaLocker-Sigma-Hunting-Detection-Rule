@@ -1,0 +1,27 @@
+title: Allow the System To Share Network Connections Between Different User Sessions
+id: 102470b5-932b-4501-8173-d3335ed1ac47
+status: experimental
+description: MedusaLocker ransomware throughout the network by editing the EnableLinkedConnections value within the infected machine's registry to make the remote shares accessible from the elevated administrative process session.
+references:
+    - atomic-red-team/atomics/T1112/T1112.md at 40b77d63808dd4f4eafb83949805636735a1fd15 · redcanaryco/ato
+    - https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-181a
+author: Hu@sha
+date: 2022-08-19
+modified: 2024-12-25
+tags:
+    - attack.persistence
+    - attack.t1133
+    - ransomware.medusalocker
+logsource:
+    category: registry_value_set
+    product: windows
+    service: sysmon
+detection:
+    selection:
+        EventID: 13
+        TargetObject: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLinkedConnections'
+        Details: 'DWORD (0x00000001)'
+    condition: selection
+falsepositives:
+    - Legitimate use of the feature (alerts should be investigated either way)
+level: medium
